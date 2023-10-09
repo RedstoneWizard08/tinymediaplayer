@@ -1,0 +1,33 @@
+{
+    "name": "tinymediaplayer",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "fmt": "prettier --write .",
+        "serve": "serve -p 4000 dist"
+    },
+    "devDependencies": {
+        "@types/jsmediatags": "^3.9.4",
+        "@types/node": "^20.8.4",
+        "html-minifier-terser": "^7.2.0",
+        "prettier": "^3.0.3",
+        "serve": "^14.2.1",
+        "terser": "^5.21.0",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5",
+        "vite-plugin-minify": "^1.5.2",
+        "vite-plugin-singlefile": "^0.13.5"
+    },
+    "dependencies": {
+        "jsmediatags": "^3.9.7"
+    },
+    "pnpm": {
+        "patchedDependencies": {
+            "jsmediatags@3.9.7": "patches/jsmediatags@3.9.7.patch"
+        }
+    }
+}
